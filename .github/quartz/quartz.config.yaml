@@ -1,9 +1,9 @@
 configuration:
-  pageTitle: "masawada's note"
+  pageTitle: "notes"
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
-  locale: ja-JP
+  locale: en-US
   baseUrl: notes.masawada.me
   ignorePatterns: []
   defaultDateType: modified
@@ -231,7 +231,7 @@ plugins:
       display: mobile-only
 
   - source: github:quartz-community/footer
-    enabled: true
+    enabled: false
     options:
       links: {}
 
