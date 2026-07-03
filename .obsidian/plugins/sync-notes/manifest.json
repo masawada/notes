@@ -1,6 +1,6 @@
 {
-  "id": "note-sync",
-  "name": "Note Sync",
+  "id": "sync-notes",
+  "name": "Sync Notes",
   "version": "1.0.0",
   "minAppVersion": "1.0.0",
   "description": "Auto-sync notes to git and rename pasted images with unique filenames",
