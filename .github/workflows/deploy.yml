@@ -1,0 +1,79 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+
+      - name: Clone Quartz v5
+        run: git clone --depth 1 --branch v5 https://github.com/jackyzha0/quartz.git quartz-build
+
+      - name: Cache dependencies
+        uses: actions/cache@v5
+        with:
+          path: quartz-build/node_modules
+          key: ${{ runner.os }}-quartz-${{ hashFiles('quartz-build/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-quartz-
+
+      - name: Cache Quartz plugins
+        uses: actions/cache@v5
+        with:
+          path: quartz-build/.quartz/plugins
+          key: ${{ runner.os }}-plugins-${{ hashFiles('quartz-build/quartz.lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-plugins-
+
+      - name: Install dependencies
+        run: cd quartz-build && npm ci
+
+      - name: Install Quartz plugins
+        run: cd quartz-build && npx quartz plugin install
+
+      - name: Prepare content
+        run: |
+          rm -rf quartz-build/content/*
+          cp pages/*.md quartz-build/content/ 2>/dev/null || true
+          mkdir -p quartz-build/content/images
+          cp images/*.* quartz-build/content/images/ 2>/dev/null || true
+          cp .github/quartz/quartz.config.yaml quartz-build/quartz.config.yaml
+
+      - name: Build
+        run: cd quartz-build && npx quartz build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: quartz-build/public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

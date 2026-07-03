@@ -1,0 +1,12 @@
+# Obsidian
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+.obsidian/graph.json
+
+# Plugin dev
+.obsidian/plugins/note-sync/node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
