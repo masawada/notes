@@ -5,7 +5,7 @@
 .obsidian/graph.json
 
 # Plugin dev
-.obsidian/plugins/note-sync/node_modules/
+.obsidian/plugins/sync-notes/node_modules/
 
 # OS
 .DS_Store
