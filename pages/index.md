@@ -1,4 +1,7 @@
 ---
-title: Home
+title: このノートについて
 ---
-Welcome to note.masawada.me
+- このノートは、masawadaが調べたことや考えたことをメモするためのものです
+- 調べたり検討する過程で生成AIを利用してファイルを更新することがあります
+- 保存されている情報が必ずしも正しいとは限りません
+- notes.masawada.me ドメイン配下で配信されている内容は最新のスナップショットであり、過去の履歴を含む全てのドキュメントは https://github.com/masawada/notes に保持されています
