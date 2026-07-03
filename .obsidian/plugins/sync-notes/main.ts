@@ -60,7 +60,7 @@ export default class NoteSyncPlugin extends Plugin {
 
   private scheduleSync() {
     if (this.syncTimer) clearTimeout(this.syncTimer);
-    this.syncTimer = setTimeout(() => this.sync(), 10_000);
+    this.syncTimer = setTimeout(() => this.sync(), 30_000);
   }
 
   private async sync() {
