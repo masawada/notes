@@ -5,5 +5,7 @@
   "useMarkdownLinks": false,
   "alwaysUpdateLinks": true,
   "showUnsupportedFiles": false,
-  "userIgnoreFilters": ["README.md"]
+  "userIgnoreFilters": [
+    "README.md"
+  ]
 }
