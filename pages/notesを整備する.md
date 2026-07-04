@@ -1,0 +1,12 @@
+- [x] repoにpushした内容をGitHub ActionsでGitHub Pagesにデプロイして配信する
+- [x] Obsidianで編集した内容を自動でpushする
+- [x] Obsidianに貼り付けた画像を自動でリネームしてimages/以下に配置する
+- [x] モバイルで利用できないか検討
+	- obsidian-gitを利用したらいけるかも
+	- 自前で整備するのは大変そう
+- [ ] 表示の整理
+	- [ ] 3カラムやめる(やめられる?)
+	- [ ] time to readを非表示にする
+	- [ ] 時刻を記事の下に置いてupdatedのみを表示する
+	- [ ] テーマを変える
+	- [ ] graph viewやめる
