@@ -1,4 +1,4 @@
-# notes.masawada.me
+# notes
 
 A repository for publishing an Obsidian vault via GitHub Pages. Built with [Quartz v5](https://quartz.jzhao.xyz/) and served at https://notes.masawada.me.
 
