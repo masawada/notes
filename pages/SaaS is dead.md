@@ -1,4 +1,4 @@
 - [[AIエージェント]]が発展してきた結果よく言われるようになったフレーズ
 - マイクロソフト CEOの発言から流行った?
 	- [IDC - Is SaaS Dead? Rethinking the Future of Software in the Age of AI](https://www.idc.com/resource-center/blog/is-saas-dead-rethinking-the-future-of-software-in-the-age-of-ai/)
-- 
+	- この記事においては、市場が消滅するわけではなくソフトウェアの利用形態と収益モデルが変わると主張されている
