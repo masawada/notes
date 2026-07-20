@@ -1,4 +1,11 @@
-
+ - 調べてもこれというものがバシッと出てこない
+ - このあたりから頑張って読み解く必要がある
+	 - [PCB Manufacturing & Assembly Capabilities - JLCPCB](https://jlcpcb.com/capabilities/pcb-capabilities)
+ - Board43を作るときに使ったデザインルールで怒られることはなかったので、当面はこれを利用できそう
+	 - Board43とはこれのこと [Inside #Board43: 基板編 #rubykaigi - inSmartBank](https://blog.smartbank.co.jp/entry/inside-board43-pcb)
+ - 製造能力が上がった結果、制約が緩くなることもあるらしい
+	 - ほんまか?
+ - ので2026年上半期時点での値ということで
 
 ## 銅線
 
@@ -31,6 +38,8 @@
 | ---------- | ---- |
 | 最小マイクロビア直径 | 使用不可 |
 | 最小マイクロビア穴径 | 使用不可 |
+
+とりあえず0でいれておけばOK
 
 ---
 
